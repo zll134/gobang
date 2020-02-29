@@ -136,7 +136,8 @@ window .onload=function(){
                 com.chessmap[com.doti][com.dotj]=1;
             }
             //然后电脑下
-            var complay=maxminsearch(com.chessmap,-1,0);
+            
+            var complay=maxminsearch(com.chessmap,-1,3,-Infinity,Infinity);
             com.putpieceimg(com.whitepiece,complay.i,complay.j);
             com.chessmap[complay.i][complay.j]=-1;
             
